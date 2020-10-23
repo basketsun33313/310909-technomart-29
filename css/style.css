@@ -16,6 +16,8 @@
 	--basic-social-item: #212A3A;
 	--basic-light-grey-checkbox: #C5C5C5;
 	--basic-light-grey-checkbox-hover: #B5B5B5;
+	--basic-login-grey: #3D546F;
+
 }
 
 /* Global */
@@ -391,15 +393,24 @@ fieldset {
     padding: 12px 27px 12px 45px;
 }
 
-.welcome::before {
-	content: "";
+.main-icon-logout {
 	position: absolute;
-	display: block;
-	top: 15px;
-	left: 20px;
-	background-image: url("../img/icon-login.svg");
-	width: 20px;
-	height: 17px;
+    top: 15px;
+	left: 17px;
+	fill: var(--basic-light-grey-checkbox);
+}
+
+.welcome:hover {
+	color: var(--basic-red);
+}
+
+.welcome:hover  .main-icon-logout {
+	fill: var(--basic-login-grey);
+}
+
+.welcome:active {
+	color: var(--basic-black);
+	opacity: 0.3;
 }
 
 .registration {
@@ -412,6 +423,15 @@ fieldset {
     color: black;
     margin-left: 10px;
     padding: 12px 24px 12px 24px;
+}
+
+.registration:hover{
+	color: var(--basic-red);
+}
+
+.registration:active {
+	color: var(--basic-black);
+	opacity: 0.3;
 }
 
 .main-navigation {
@@ -768,7 +788,8 @@ fieldset {
 	margin-bottom: 20px;
 }
 
-.goods-item:hover {
+.goods-item:hover,
+.goods-item:focus-within {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 	border-color: transparent;
 }
@@ -871,6 +892,14 @@ fieldset {
 }
 
 .goods-item:hover .goods-img-container {
+	display: none;
+}
+
+.goods-item:focus-within .goods-buttons-container {
+	display: block;
+}
+
+.goods-item:focus-within .goods-img-container {
 	display: none;
 }
 
@@ -1205,21 +1234,29 @@ fieldset {
 	display: block;
 }
 
-
-.login-name::after {
-	content: "";
+.icon-user {
 	position: absolute;
-	display: block;
-	width: 20px;
-	height: 18px;
-	top: 12px;
-    right: 19px;
-	background-image: url(../img/icon-logout.svg);
-	background-size: 100%;
-	background-repeat: no-repeat;
+	top: 10px;
+	left: 20px;
+	fill: var(--basic-light-grey-checkbox);
 }
 
-.login-name:hover .login-name::before {
+.icon-logout {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	fill: var(--basic-light-grey-checkbox);
+}
+
+.icon-logout:hover {
+	fill: var(--basic-login-grey);
+}
+
+.login-name:hover .icon-user {
+	fill: var(--basic-login-grey);
+}
+
+.login-name:active {
 	opacity: 0.3;
 }
 
@@ -1237,10 +1274,23 @@ fieldset {
 	font-weight: normal;
 	font-size: 16px;
 	color: var(--basic-under);
-	margin-right: 6px;
+	margin-right: 12px;
+}
+
+.my-order {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: var(--basic-under);
+	margin-right: 12px;
+	position: relative;
 }
 
 .inner-login-link:hover {
+	color: var(--basic-red);
+}
+
+.my-order:hover {
 	color: var(--basic-red);
 }
 
@@ -1248,20 +1298,20 @@ fieldset {
 	color: var(--basic-light-grey-checkbox);
 }
 
-.point {
-	width: 6px;
-	height: 7px;
-	background-color: var(--basic-under);
-	border-radius: 50%;
-	margin-right: 8px;
+.my-order::after {
+	content: "";
+    position: absolute;
+    display: block;
+    top: 7px;
+    right: -9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--basic-under);
 }
 
-.point:hover {
+.my-order:hover .my-order::after {
 	background-color: var(--basic-red);
-}
-
-.point:active {
-	background-color: var(--basic-light-grey-checkbox);
 }
 
 .bread-crambs {
@@ -1368,6 +1418,7 @@ fieldset {
 	margin-left: 60px;
 	color: #000000;
 	border-bottom: 1px dashed red;
+	text-transform: uppercase;
 }
 
 .sorting-type-link-price {
@@ -1376,6 +1427,7 @@ fieldset {
 	font-weight: normal;
 	font-size: 13px;
 	color: var(--basic-red);
+	text-transform: uppercase;
 }
 
 .sorting-direction-list {
@@ -1527,6 +1579,10 @@ fieldset {
 	display: block;
 }
 
+.input-checkbox:focus + .catalog-filter-label-checkbox::before {
+	outline: 2px solid var(--basic-black);
+}
+
 .filter-checked-indicator {
 	position: absolute;
     top: 2px;
@@ -1601,6 +1657,10 @@ fieldset {
     background-color: var(--basic-light-grey-checkbox);
 	border-radius: 50%;
 	display: none;
+}
+
+.input-radio:focus + .catalog-filter-label-radio::before {
+	outline: 2px solid var(--basic-black);
 }
 
 .input-radio:hover + .catalog-filter-label-radio::before {
