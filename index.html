@@ -18,7 +18,7 @@
 	<header class="main-header">
 		<div class="header-inner-menu">
 			<div class="container header-inner-menu-container">
-				<a class="logo" href="#">
+				<a class="logo" aria-label="Логотип магазина Техномарт" href="">
 					<img src="./img/logo-technomart.svg" alt="ТЕХНОМАРТ">
 				</a>
 				<div class="search-container">
@@ -32,38 +32,38 @@
 						</svg>
 					</form>
 				</div>
-				<a class="bookmarks" href="#"><span class="bookmarks-text">Закладки: 0</span></a>
-				<a class="cart" href="#"><span class="cart-text">Корзина: 0</span></a>
-				<a class="button place-your-order" href="#">Оформить заказ</a>
+				<a class="bookmarks" href="#" aria-label="Добавить в закладки"><span class="bookmarks-text">Закладки: 0</span></a>
+				<a class="cart" href="#" aria-label="Добавить в карзину"><span class="cart-text">Корзина: 0</span></a>
+				<a class="button place-your-order" href="#" aria-label="Оформление заказа">Оформить заказ</a>
 			</div>
 		</div>
 		<div class="header-internet-shop container">
 			<p class="description-internet-shop"><em>Интернет-магазин строительных материалов и&nbsp;инструментов для
 					ремонта</em></p>
 			<div class="tel-container">
-				<a class="tel" href="tel:78125550555">+7 (812) 555-05-55</a>
+				<a class="tel" href="tel:78125550555" aria-label="позвонить нам">+7 (812) 555-05-55</a>
 				<address class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
 			</div>
 			<div class="login-container">
-				<a class="welcome" href="#">
+				<a class="welcome" href="#" aria-label="Вход в личный кабинет">
 					<svg width="20" height="17" viewBox="0 0 20 17" class="main-icon-login" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" />
 						<path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" />
 					</svg>	
 					Войти
 				</a>
-				<a class="registration" href="#">Регистрация</a>
+				<a class="registration" href="#" aria-label="Регистрация на сайте Техномарт">Регистрация</a>
 			</div>
 		</div>
 		<nav class="main-navigation container">
 			<ul class="navigation-list">
-				<li class="navigation-item"><a class="navigation-link" href="#">Главная</a></li>
-				<li class="navigation-item"><a class="navigation-link" href="#">Компания</a></li>
-				<li class="navigation-item"><a class="navigation-link" href="#">Каталог</a></li>
-				<li class="navigation-item"><a class="navigation-link" href="#">Новости</a></li>
-				<li class="navigation-item"><a class="navigation-link" href="#">Спецпредложения</a></li>
-				<li class="navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
-				<li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="Главная страница" href="">Главная</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="О компании" href="#">Компания</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="В каталог" href="#">Каталог</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="Все новости" href="#">Новости</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="Специальные предложения для наших клиентов" href="#">Спецпредложения</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="Оформление доставки" href="#">Доставка</a></li>
+				<li class="navigation-item"><a class="navigation-link" aria-label="Страница с нашими контактными данными" href="#">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -71,7 +71,7 @@
 		<section class="rectangles container">
 			<ul class="rectangles-list">
 				<li class="rectangles-item rectangles-item--material">
-					<h2>Материалы</h2><a class="rectangles-link" href="#">На любой вкус</a>
+					<h2>Материалы</h2><a class="rectangles-link" aria-label="Материалы для ремонта" href="#">На любой вкус</a>
 				</li>
 				<li class="rectangles-item rectangles-item--device">
 					<h2>Инструмент</h2><a class="rectangles-link" href="#">На все случаи</a>
@@ -213,7 +213,7 @@
 				<div class="servises-slider-container">
 					<ul class="servises-list">
 						<li class="servises-item">
-							<a class="servises-link" data-screen="servises-slider-delivery" href="#">Доставка</a>
+							<a class="servises-link servises-link-active" data-screen="servises-slider-delivery" href="#">Доставка</a>
 						</li>
 						<li class="servises-item">
 							<a class="servises-link" data-screen="servises-slider-guarantee" href="#">Гарантия</a>
@@ -230,18 +230,15 @@
 									к вашему подъезду совершенно бесплатно!<br>
 									Ведь мы неплохо заработаем,<br>
 									поднимая его на ваш этаж!</p>
-								<img src="">
 							</li>
 							<li class="servises-slider-item servises-slider-guarantee">
 								<h2 class="servises-slider-header">Гарантия</h2>
 								<p class="servises-slider-description">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-								<img src="">
 							</li>
 							<li class="servises-slider-item servises-slider-credit">
 								<h2 class="servises-slider-header">Кредит</h2>
-								<p class="servises-slider-description">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-								<a href="#" class="servises-slider-link button-all-items">Отправить заявку</a>
-								<img src="">
+								<p class="servises-slider-description servises-slider-description-credit">Залезть в долговую яму стало проще! <br>Кредитные консультанты придут вам на помощь.</p>
+								<a href="#" class="servises-slider-link">Отправить заявку</a>
 							</li>
 						</ul>
 					</div>
@@ -296,7 +293,7 @@
 					</ul>
 				</div>
 				<div class="inner-under-container">
-					<p class="under-description">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+					<address class="under-description">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a class="under-tel" href="tel:78125550555" aria-label="Позвонить нам">+7 (812) 555-05-55</a></address>
 					<ul class="inner-under-navigation-list">
 						<li class="inner-under-navigation-item">
 							<a class="inner-under-navigation-link" href="#">Материалы</a>
