@@ -1464,6 +1464,13 @@ fieldset {
     margin-left: 51px;
 }
 
+.link-login-container {
+    width: 299;
+    background-color: var(--basic-white);
+    display: flex;
+    justify-content: flex-start;
+}
+
 .login-name {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
@@ -1471,28 +1478,25 @@ fieldset {
     font-size: 21px;
     color: var(--basic-black);
     text-align: center;
-    background-color: var(--basic-white);
     padding: 10px;
     position: relative;
     display: block;
+    margin-left: 47px;
 }
 
 .icon-user {
     position: absolute;
-    top: 12px;
-    left: 16px;
+    top: 11px;
+    left: -32px;
     fill: var(--basic-light-grey-checkbox);
 }
 
 .icon-logout-link {
-    position: relative;
-    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
 .icon-logout {
-    position: absolute;
-    top: -29px;
-    right: 17px;
     fill: var(--basic-light-grey-checkbox);
 }
 
@@ -1523,7 +1527,7 @@ fieldset {
 .inner-login-link {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--basic-under);
     margin-right: 12px;
     margin-left: 9px;
@@ -1532,7 +1536,7 @@ fieldset {
 .my-order {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--basic-under);
     margin-right: 12px;
     position: relative;
@@ -1560,8 +1564,8 @@ fieldset {
     display: block;
     top: 7px;
     right: -9px;
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background-color: var(--basic-under);
 }
