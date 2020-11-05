@@ -1193,7 +1193,7 @@ fieldset {
     display: flex;
     justify-content: flex-start;
     margin-top: 70px;
-    padding-bottom: 100px;
+    padding-bottom: 99px;
     align-items: start;
 }
 
@@ -1225,8 +1225,7 @@ fieldset {
     color: var(--basic-darkblue);
 }
 
-.servises-link:hover,
-.servises-link:focus {
+.servises-link:hover {
     background-color: var(--basic-darkblue);
     color: var(--basic-white);
     outline: none;
@@ -1237,12 +1236,19 @@ fieldset {
     color: var(--basic-darkblue);
 }
 
+.servises-link:focus {
+    background-color: var(--basic-white);
+    color: var(--basic-darkblue);
+}
+
 .servises-slider {
     width: 619px;
     margin-left: 80px;
 }
 
 .servises-slider-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -1265,14 +1271,20 @@ fieldset {
 
 .servises-slider-delivery::after {
     background-image: url(../img/delivery.png);
+    top: 18px;
+    right: 0;
 }
 
 .servises-slider-guarantee::after {
     background-image: url(../img/guarantee.png);
+    top: -4px;
+    right: -9px;
 }
 
 .servises-slider-credit::after {
     background-image: url(../img/credit.png);
+    top: -3px;
+    right: -11px;
 }
 
 .servises-slider-item--active {
@@ -1299,22 +1311,28 @@ fieldset {
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
-    padding-top: 11px;
-    margin-left: -40px;
+    padding-top: 27px;
+}
+
+.guarantee-description {
+    margin-top: -6px;
 }
 
 .servises-slider-description-credit {
-    padding-bottom: 20px;
+    margin-bottom: 27px;
 }
 
 .servises-slider-link {
+    display: block;
     font-family: "Cuprum", "Arial", sans-serif;
-    width: 195px;
+    width: 121px;
     color: var(--basic-white);
     background-color: var(--basic-servises-slider-link);
     border-radius: 2px;
     text-transform: uppercase;
     padding: 11px 37px 9px 37px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .servises-slider-link:hover,
@@ -1359,6 +1377,7 @@ fieldset {
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
+    padding-bottom: 20px;
 }
 
 .company-description-second {
@@ -1423,7 +1442,7 @@ fieldset {
 
 .button-all-items-company {
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 19px;
     width: 172px;
     padding: 11px 8px 9px 40px;
 }
@@ -1447,16 +1466,18 @@ fieldset {
     margin: 0;
     padding: 0;
     font-family: "PT Sans", "Arial", sans-serif;
-    margin-top: 24px;
+    margin-top: 20px;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
+    padding-bottom: 2px;
 }
 
 .contacts-map-link {
     display: block;
     margin-top: 32px;
+    margin-bottom: 2px;
 }
 
 .contacts-map-link:focus {
@@ -1467,7 +1488,7 @@ fieldset {
     display: inline-block;
     margin-top: 21px;
     width: 230px;
-    padding: 11px 8px 8px 63px;
+    padding: 11px 7px 8px 63px;
 }
 
 
@@ -1548,13 +1569,9 @@ fieldset {
 }
 
 .login-link-container {
-    width: 240px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 46px;
     padding-bottom: 5px;
     margin-top: 9px;
+    text-align: center;
 }
 
 .inner-login-link {
@@ -1562,8 +1579,7 @@ fieldset {
     font-weight: normal;
     font-size: 15px;
     color: var(--basic-under);
-    margin-right: 12px;
-    margin-left: 9px;
+    position: relative;
 }
 
 .my-order {
@@ -1571,7 +1587,7 @@ fieldset {
     font-weight: normal;
     font-size: 15px;
     color: var(--basic-under);
-    margin-right: 12px;
+    margin-right: 25px;
     position: relative;
 }
 
@@ -1591,16 +1607,24 @@ fieldset {
     color: var(--basic-light-grey-checkbox);
 }
 
-.my-order::after {
+.inner-login-link::after {
     content: "";
     position: absolute;
     display: block;
-    top: 7px;
-    right: -9px;
+    top: 9px;
+    left: -16px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
     background-color: var(--basic-under);
+}
+
+.my-order:hover+.inner-login-link::after {
+    background-color: var(--basic-red);
+}
+
+.inner-login-link:hover::after {
+    background-color: var(--basic-red);
 }
 
 .my-order:hover .my-order::after,
@@ -2205,10 +2229,12 @@ fieldset {
     font-size: 18px;
     line-height: 24px;
     margin-left: 2px;
+    padding-bottom: 1px;
 }
 
 .under-tel {
     color: var(--basic-white);
+    margin-left: 3px;
 }
 
 .under-tel:hover,
@@ -2270,7 +2296,8 @@ fieldset {
     justify-content: flex-start;
     list-style: none;
     margin-top: 28px;
-    margin-left: 23px
+    margin-left: 23px;
+    padding-bottom: 75px;
 }
 
 .inner-under-navigation-link {
@@ -2580,4 +2607,8 @@ fieldset {
     80% {
         transform: translateX(10px);
     }
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }

@@ -37,6 +37,8 @@ if (servisesLinks) {
             let screen = this.dataset.screen;
             document.querySelector('.servises-slider-item--active').classList.remove('servises-slider-item--active');
             document.querySelector('.' + screen).classList.add('servises-slider-item--active');
+            document.querySelector('.servises-link-active').classList.remove('servises-link-active');
+            serviceButton.classList.add('servises-link-active');
         });
     });
 }
@@ -93,4 +95,17 @@ sortingDirLinks.forEach(function(sortingDirLink) {
         linkDirActive.classList.remove('sorting-direction-link-active');
         sortingDirLink.classList.add('sorting-direction-link-active');
     });
+});
+
+let username = document.querySelector('.username');
+let email = document.querySelector('.email');
+let letter = document.querySelector('.letter');
+let modalWriteUsForm = document.querySelector('.write-us-form');
+modalWriteUsForm.addEventListener('submit', function(evt) {
+    if (!username.value || !email.value || !letter.value) {
+        evt.preventDefault();
+    }
+    modalWriteUS.classList.remove('modal-error');
+    modalWriteUS.offsetWidth = modalWriteUS.offsetWidth;
+    modalWriteUS.classList.add('modal-error');
 });
