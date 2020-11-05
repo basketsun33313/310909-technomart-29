@@ -343,7 +343,7 @@ fieldset {
 .header-internet-shop {
     display: flex;
     justify-content: flex-start;
-    padding-top: 39px;
+    padding-top: 44px;
     padding-bottom: 47px;
 }
 
@@ -357,7 +357,6 @@ fieldset {
     font-size: 16px;
     line-height: 23px;
     margin-left: 30px;
-    margin-top: 5px;
 }
 
 .tel-container {
@@ -502,7 +501,7 @@ fieldset {
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     font-size: 18px;
-    padding: 15px 19px 20px 19px;
+    padding: 17px 19px 20px 19px;
 }
 
 .navigation-link:hover,
@@ -932,7 +931,8 @@ fieldset {
     position: relative;
     margin-left: 20px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    padding-top: 170px;
 }
 
 .goods-item:hover,
@@ -953,6 +953,7 @@ fieldset {
     background-repeat: no-repeat;
     background-position: 0 0;
     color: var(--basic-white);
+    z-index: 10;
 }
 
 .goods-img-container {
@@ -961,6 +962,9 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .goods-img {
@@ -970,9 +974,14 @@ fieldset {
 
 .goods-buttons-container {
     height: 177px;
-    display: none;
+    display: block;
     padding-top: 38px;
     box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .goods-button-buy {
@@ -1035,7 +1044,7 @@ fieldset {
 }
 
 .goods-item:hover .goods-buttons-container {
-    display: block;
+    opacity: 1;
 }
 
 .goods-item:hover .goods-img-container {
@@ -1043,7 +1052,7 @@ fieldset {
 }
 
 .goods-item:focus-within .goods-buttons-container {
-    display: block;
+    opacity: 1;
 }
 
 .goods-item:focus-within .goods-img-container {
@@ -1054,11 +1063,13 @@ fieldset {
     width: 185px;
     margin: 0 auto;
     display: inline-block;
-    font-family: "PT Sans", "Arial" sans-serif;
+    font-family: "PT Sans", "Arial"sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     color: var(--basic-black);
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .goods-price-container {
@@ -1099,7 +1110,7 @@ fieldset {
     bottom: 23px;
     left: 49%;
     transform: translateX(-43%);
-    padding: 0px;
+    padding-bottom: 9px;
 }
 
 .manufacturers-list {
@@ -1280,7 +1291,8 @@ fieldset {
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
-    padding-top: 28px;
+    padding-top: 11px;
+    margin-left: -40px;
 }
 
 .servises-slider-description-credit {
@@ -1682,19 +1694,26 @@ fieldset {
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-    margin-left: 68px;
+    margin-left: 45px;
     color: var(--basic-black);
     border-bottom: 1px dashed var(--basic-red);
     text-transform: uppercase;
+    display: block;
 }
 
-.sorting-type-link-price {
+.sorting-type-link:hover,
+.sorting-type-link:focus {
+    border-bottom: 2px solid var(--basic-red);
+}
+
+.sorting-type-link-active {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     color: var(--basic-red);
     text-transform: uppercase;
+    border-bottom: none;
 }
 
 .sorting-direction-list {
@@ -1707,18 +1726,10 @@ fieldset {
     padding-top: 10px;
 }
 
-.sorting-direction-link-up {
+.sorting-direction-link {
     display: block;
     width: 11px;
     height: 10px;
-    background-image: url("../img/icon-down-dir.svg");
-}
-
-.sorting-direction-link-down {
-    display: block;
-    width: 11px;
-    height: 10px;
-    background-image: url("../img/icon-down-dir2.svg");
     margin-left: 20px;
 }
 
@@ -1906,7 +1917,7 @@ fieldset {
 
 /****
 .input-checkbox:disabled + .catalog-filter-label-checkbox::before {
-	opacity: 0.3;
+  opacity: 0.3;
 }
 ***/
 

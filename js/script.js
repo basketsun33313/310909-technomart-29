@@ -6,32 +6,40 @@ let modalMap = document.querySelector('.modal-map');
 let servisesLinks = document.querySelectorAll('.servises-link');
 let bullits = document.querySelectorAll('.slider-pager-link');
 
-modalContactsOpenButton.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    modalWriteUS.classList.toggle('modal-show');
-});
-
-modalCloseButtons.forEach(function(el, i) {
-    el.addEventListener('click', function(evt) {
+if (modalContactsOpenButton) {
+    modalContactsOpenButton.addEventListener('click', function(evt) {
         evt.preventDefault();
-        let modalShow = document.querySelector('.modal-show');
-        modalShow.classList.remove('modal-show');
+        modalWriteUS.classList.toggle('modal-show');
     });
-});
+}
 
-modalContactsMapButton.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    modalMap.classList.toggle('modal-show');
-});
+if (modalCloseButtons) {
+    modalCloseButtons.forEach(function(el, i) {
+        el.addEventListener('click', function(evt) {
+            evt.preventDefault();
+            let modalShow = document.querySelector('.modal-show');
+            modalShow.classList.remove('modal-show');
+        });
+    });
+}
 
-servisesLinks.forEach(function(serviceButton, i) {
-    serviceButton.addEventListener('click', function(evt) {
+if (modalContactsMapButton) {
+    modalContactsMapButton.addEventListener('click', function(evt) {
         evt.preventDefault();
-        let screen = this.dataset.screen;
-        document.querySelector('.servises-slider-item--active').classList.remove('servises-slider-item--active');
-        document.querySelector('.' + screen).classList.add('servises-slider-item--active');
+        modalMap.classList.toggle('modal-show');
     });
-});
+}
+
+if (servisesLinks) {
+    servisesLinks.forEach(function(serviceButton, i) {
+        serviceButton.addEventListener('click', function(evt) {
+            evt.preventDefault();
+            let screen = this.dataset.screen;
+            document.querySelector('.servises-slider-item--active').classList.remove('servises-slider-item--active');
+            document.querySelector('.' + screen).classList.add('servises-slider-item--active');
+        });
+    });
+}
 
 if (bullits) {
     bullits.forEach(function(bullit) {
@@ -66,3 +74,13 @@ if (ticks) {
         });
     });
 };
+
+let sortingTypeLinks = document.querySelectorAll('.sorting-type-link');
+sortingTypeLinks.forEach(function(sortingTypeLink) {
+    sortingTypeLink.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        let linkActive = document.querySelector('.sorting-type-link-active');
+        linkActive.classList.remove('sorting-type-link-active');
+        sortingTypeLink.classList.add('sorting-type-link-active');
+    });
+});
