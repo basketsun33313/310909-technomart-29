@@ -1011,7 +1011,9 @@ fieldset {
     opacity: 0.5;
 }
 
-.goods-button-buy:hover {
+.goods-button-buy:hover,
+.goods-button-buy:focus {
+    outline: none;
     background-color: #5FBB2D;
 }
 
@@ -1035,7 +1037,9 @@ fieldset {
     background-color: var(--basic-white);
 }
 
-.goods-button-bookmark:hover {
+.goods-button-bookmark:hover,
+.goods-button-bookmark:focus {
+    outline: none;
     border: 2px solid var(--basic-under);
 }
 
@@ -1070,6 +1074,10 @@ fieldset {
     color: var(--basic-black);
     padding-top: 10px;
     padding-bottom: 5px;
+}
+
+.goods-header:focus {
+    outline: none;
 }
 
 .goods-price-container {
@@ -1508,12 +1516,25 @@ fieldset {
     margin-left: 10px;
 }
 
+.icon-logout-link:focus {
+    outline: none;
+}
+
+.icon-logout-link:hover .icon-logout,
+.icon-logout-link:focus .icon-logout {
+    fill: var(--basic-login-grey);
+}
+
 .icon-logout {
     fill: var(--basic-light-grey-checkbox);
 }
 
 .icon-logout:hover {
     fill: var(--basic-login-grey);
+}
+
+.login-name:focus {
+    outline: none;
 }
 
 .login-name:hover .icon-user,
@@ -1582,7 +1603,12 @@ fieldset {
     background-color: var(--basic-under);
 }
 
-.my-order:hover .my-order::after {
+.my-order:hover .my-order::after,
+.my-order:focus .my-order::after {
+    background-color: var(--basic-red);
+}
+
+.inner-login-link:hover~.my-order::after {
     background-color: var(--basic-red);
 }
 
@@ -1704,6 +1730,7 @@ fieldset {
 .sorting-type-link:hover,
 .sorting-type-link:focus {
     border-bottom: 2px solid var(--basic-red);
+    outline: none;
 }
 
 .sorting-type-link-active {
@@ -1741,8 +1768,11 @@ fieldset {
     fill: var(--basic-red);
 }
 
-.sorting-direction-link:hover .sorting-direction-icon,
-.sorting-direction-link:focus .sorting-direction-icon {
+.sorting-direction-link:focus {
+    outline: none;
+}
+
+.sorting-direction-link:hover .sorting-direction-icon {
     fill: var(--basic-black);
 }
 
@@ -1833,6 +1863,12 @@ fieldset {
     background-color: var(--basic-catalog-filter-price-link-last);
 }
 
+.catalog-filter-price-link:hover,
+.catalog-filter-price-link:focus {
+    outline: none;
+    box-shadow: 0px 4px 4px var(--basic-manufacturers-link-hover);
+}
+
 .catalog-filter-input-range-bottom-container {
     display: flex;
     justify-content: flex-start;
@@ -1852,6 +1888,10 @@ fieldset {
     border: none;
     background-color: var(--basic-crema);
     text-align: center;
+}
+
+.catalog-filter-input-range-bottom:focus {
+    outline: none;
 }
 
 .catalog-filter-legend {
@@ -1994,8 +2034,18 @@ fieldset {
     background-color: var(--basic-white);
     text-transform: uppercase;
     cursor: pointer;
-    border: 1px solid var(--basic-light-grey-checkbox);
+    border: 1px solid var(--basic-bottom-filter-link);
     margin-top: 30px;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+    outline: none;
+    border: 1px solid var(--basic-light-grey-checkbox);
+}
+
+.button-filter:active {
+    border: 1px solid var(--basic-red);
 }
 
 .bottom-filter-list {
@@ -2055,6 +2105,12 @@ fieldset {
     border-radius: 10%;
 }
 
+.bottom-filter-link:hover,
+.bottom-filter-link:focus {
+    outline: none;
+    border: 1px solid var(--basic-light-grey-checkbox);
+}
+
 .bottom-filter-link:active {
     border: 1px solid var(--basic-red);
 }
@@ -2063,6 +2119,12 @@ fieldset {
     border: 1px solid var(--basic-red);
     background-color: var(--basic-white);
     color: var(--basic-black);
+}
+
+.first:hover,
+.first:focus {
+    outline: none;
+    border: 1px solid var(--basic-light-grey-checkbox);
 }
 
 .inner-description {
