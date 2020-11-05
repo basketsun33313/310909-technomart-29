@@ -1686,7 +1686,7 @@ fieldset {
     justify-content: flex-start;
     list-style: none;
     margin-left: 141px;
-    padding-top: 5px;
+    padding-top: 9px;
 }
 
 .sorting-type-link {
@@ -1694,7 +1694,7 @@ fieldset {
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-    margin-left: 45px;
+    margin-left: 40px;
     color: var(--basic-black);
     border-bottom: 1px dashed var(--basic-red);
     text-transform: uppercase;
@@ -1723,7 +1723,7 @@ fieldset {
     justify-content: flex-start;
     list-style: none;
     margin-left: 47px;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 
 .sorting-direction-link {
@@ -1731,6 +1731,23 @@ fieldset {
     width: 11px;
     height: 10px;
     margin-left: 20px;
+}
+
+.sorting-direction-icon {
+    fill: var(--basic-light-grey-checkbox);
+}
+
+.sorting-direction-link-active .sorting-direction-icon {
+    fill: var(--basic-red);
+}
+
+.sorting-direction-link:hover .sorting-direction-icon,
+.sorting-direction-link:focus .sorting-direction-icon {
+    fill: var(--basic-black);
+}
+
+.sorting-direction-link:active .sorting-direction-icon {
+    fill: var(--basic-red);
 }
 
 .catalog-filter-title {

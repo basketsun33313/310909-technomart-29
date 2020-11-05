@@ -84,3 +84,13 @@ sortingTypeLinks.forEach(function(sortingTypeLink) {
         sortingTypeLink.classList.add('sorting-type-link-active');
     });
 });
+
+let sortingDirLinks = document.querySelectorAll('.sorting-direction-link');
+sortingDirLinks.forEach(function(sortingDirLink) {
+    sortingDirLink.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        let linkDirActive = document.querySelector('.sorting-direction-link-active');
+        linkDirActive.classList.remove('sorting-direction-link-active');
+        sortingDirLink.classList.add('sorting-direction-link-active');
+    });
+});
