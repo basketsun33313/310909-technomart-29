@@ -104,7 +104,7 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 39px;
+    height: 37px;
     position: absolute;
     top: 0;
     left: 0;
@@ -119,6 +119,10 @@ fieldset {
     text-decoration: none;
     color: var(--basic-white);
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.logo-img {
+    margin-top: -5px;
 }
 
 .logo:active,
@@ -146,7 +150,7 @@ fieldset {
 .search-label {
     position: absolute;
     left: 42px;
-    top: 10px;
+    top: 12px;
     font-size: 18px;
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
@@ -217,7 +221,7 @@ fieldset {
 .bookmarks {
     font-family: "Cuprum", "Arial", sans-serif;
     display: flex;
-    width: 150px;
+    width: 165px;
     position: relative;
     color: var(--basic-white);
     text-decoration: none;
@@ -229,7 +233,8 @@ fieldset {
 
 .bookmarks-text {
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 21px;
+    margin-left: -16px;
     position: relative;
 }
 
@@ -264,7 +269,7 @@ fieldset {
 .cart {
     font-family: "Cuprum", "Arial", sans-serif;
     display: flex;
-    width: 150px;
+    width: 135px;
     font-size: 18px;
     color: var(--basic-white);
     text-decoration: none;
@@ -279,6 +284,8 @@ fieldset {
     display: inline-block;
     padding-left: 20px;
     position: relative;
+    vertical-align: middle;
+    margin-left: -5px;
 }
 
 .cart-text::before {
@@ -344,7 +351,8 @@ fieldset {
     display: flex;
     justify-content: flex-start;
     padding-top: 44px;
-    padding-bottom: 47px;
+    padding-bottom: 38px;
+    min-height: 76px;
 }
 
 .description-internet-shop {
@@ -398,7 +406,7 @@ fieldset {
     font-size: 14px;
     font-style: normal;
     text-align: center;
-    margin-top: 6px;
+    margin-top: 8px;
     margin-left: 5px;
 }
 
@@ -501,7 +509,7 @@ fieldset {
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
     font-size: 18px;
-    padding: 17px 19px 20px 19px;
+    padding: 19px 17px 21px 20px;
 }
 
 .navigation-link:hover,
@@ -764,10 +772,6 @@ fieldset {
     background-image: url(../img/icon-left.svg);
 }
 
-.slider-shift-left:focus {
-    outline: none;
-}
-
 .slider-shift-right {
     position: absolute;
     display: block;
@@ -776,10 +780,6 @@ fieldset {
     width: 21px;
     height: 39px;
     background-image: url(../img/icon-right.svg);
-}
-
-.slider-shift-right:focus {
-    outline: none;
 }
 
 .slider-pager {
@@ -878,6 +878,7 @@ fieldset {
     text-transform: uppercase;
     padding-top: 2px;
     padding-left: 28px;
+    max-width: 674px;
 }
 
 .button-all-items {
@@ -909,7 +910,7 @@ fieldset {
 }
 
 .goods {
-    margin-bottom: 70px;
+    margin-bottom: 82px;
 }
 
 .goods-list {
@@ -931,8 +932,9 @@ fieldset {
     position: relative;
     margin-left: 20px;
     box-sizing: border-box;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     padding-top: 170px;
+    padding-bottom: 91px;
 }
 
 .goods-item:hover,
@@ -970,6 +972,7 @@ fieldset {
 .goods-img {
     max-width: 100%;
     max-height: 100%;
+    margin-top: -3px;
 }
 
 .goods-buttons-container {
@@ -1025,8 +1028,8 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 135px;
-    height: 38px;
+    width: 129px;
+    height: 33px;
     margin-bottom: 10px;
     border: 2px solid var(--basic-place-your-order);
     margin: 0 auto 10px;
@@ -1067,7 +1070,7 @@ fieldset {
     width: 185px;
     margin: 0 auto;
     display: inline-block;
-    font-family: "PT Sans", "Arial"sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -1078,11 +1081,12 @@ fieldset {
 
 .goods-header:focus {
     outline: none;
+    color: var(--basic-red);
 }
 
 .goods-price-container {
     position: absolute;
-    height: 104px;
+    height: 90px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1105,20 +1109,22 @@ fieldset {
     justify-content: center;
     align-items: center;
     width: 141px;
+    padding-right: 15px;
+    box-sizing: border-box;
     height: 38px;
     background-image: url(../img/red-button.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     color: var(--basic-white);
     font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: bold;
     font-size: 17px;
     text-transform: uppercase;
     position: absolute;
-    bottom: 23px;
+    bottom: 20px;
     left: 49%;
     transform: translateX(-43%);
     padding-bottom: 9px;
+    padding-top: 10px;
 }
 
 .manufacturers-list {
@@ -1160,7 +1166,7 @@ fieldset {
 }
 
 .servises {
-    margin-top: 73px;
+    margin-top: 70px;
     background-color: var(--basic-gray-servises);
 }
 
@@ -1480,10 +1486,6 @@ fieldset {
     margin-bottom: 2px;
 }
 
-.contacts-map-link:focus {
-    outline: none;
-}
-
 .button-all-items-contacts {
     display: inline-block;
     margin-top: 21px;
@@ -1519,22 +1521,21 @@ fieldset {
     font-size: 21px;
     color: var(--basic-black);
     text-align: center;
-    padding: 10px;
     position: relative;
     display: block;
-    margin-left: 47px;
+    padding: 12px 10px 11px 58px;
 }
 
 .icon-user {
     position: absolute;
-    top: 11px;
-    left: -32px;
+    top: 14px;
+    left: 15px;
     fill: var(--basic-light-grey-checkbox);
 }
 
 .icon-logout-link {
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .icon-logout-link:focus {
@@ -1570,7 +1571,7 @@ fieldset {
 
 .login-link-container {
     padding-bottom: 5px;
-    margin-top: 9px;
+    margin-top: 6px;
     text-align: center;
 }
 
@@ -1688,7 +1689,7 @@ fieldset {
     color: var(--basic-under);
     background-color: var(--basic-page-title);
     text-align: left;
-    padding: 29px 0 30px 29px;
+    padding: 29px 0 26px 29px;
     box-sizing: border-box;
 }
 
@@ -1721,8 +1722,8 @@ fieldset {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 19px;
     font-size: 13px;
     color: var(--basic-black);
@@ -1735,8 +1736,12 @@ fieldset {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    margin-left: 141px;
-    padding-top: 9px;
+    margin-left: 69px;
+    padding-top: 11px;
+}
+
+.sorting-type-item {
+    margin-left: 72px;
 }
 
 .sorting-type-link {
@@ -1744,11 +1749,14 @@ fieldset {
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
-    margin-left: 40px;
     color: var(--basic-black);
     border-bottom: 1px dashed var(--basic-red);
     text-transform: uppercase;
     display: block;
+}
+
+.sorting-type-link:nth-child(2) {
+    opacity: 0.5;
 }
 
 .sorting-type-link:hover,
@@ -1773,7 +1781,7 @@ fieldset {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    margin-left: 47px;
+    margin-left: 19px;
     padding-top: 7px;
 }
 
@@ -1796,7 +1804,8 @@ fieldset {
     outline: none;
 }
 
-.sorting-direction-link:hover .sorting-direction-icon {
+.sorting-direction-link:hover .sorting-direction-icon,
+.sorting-direction-link:focus .sorting-direction-icon {
     fill: var(--basic-black);
 }
 
@@ -1810,13 +1819,13 @@ fieldset {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 18px;
     font-size: 13px;
     background-color: var(--basic-crema);
     margin-top: 20px;
-    margin-bottom: 23.15px;
+    margin-bottom: 19.15px;
     color: var(--basic-black);
     text-transform: uppercase;
 }
@@ -1828,7 +1837,7 @@ fieldset {
 }
 
 .catalog-filter-item {
-    margin-top: 20px;
+    margin-top: 21px;
 }
 
 
@@ -1927,10 +1936,18 @@ fieldset {
     margin-bottom: 17px;
 }
 
+.legend-power {
+    margin-bottom: 10px;
+}
+
+.legend-manuf {
+    margin-bottom: 3px;
+}
+
 .catalog-filter-fieldset {
     border-bottom: 1px solid var(--basic-light-grey-checkbox);
-    padding-bottom: 32px;
-    margin-bottom: 13px;
+    padding-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .catalog-filter-label {
@@ -1950,7 +1967,7 @@ fieldset {
 
 .filter-checked-indicator {
     position: absolute;
-    top: 2px;
+    top: -9px;
     left: 17px;
     display: none;
     width: 20px;
@@ -1962,11 +1979,11 @@ fieldset {
 .catalog-filter-label-checkbox::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -5px;
     left: 0;
     box-sizing: content-box;
-    width: 23px;
-    height: 23px;
+    width: 19px;
+    height: 19px;
     border: 2px solid var(--basic-light-grey-checkbox);
     border-radius: 3px;
 }
@@ -1974,10 +1991,10 @@ fieldset {
 .catalog-filter-label-checkbox::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 7px;
-    width: 19px;
-    height: 11px;
+    top: -3px;
+    left: 5px;
+    width: 15px;
+    height: 7px;
     border-bottom: 4px solid var(--basic-light-grey-checkbox);
     border-left: 4px solid var(--basic-light-grey-checkbox);
     transform: rotate(-45deg);
@@ -2059,7 +2076,7 @@ fieldset {
     text-transform: uppercase;
     cursor: pointer;
     border: 1px solid var(--basic-bottom-filter-link);
-    margin-top: 30px;
+    margin-top: 42px;
 }
 
 .button-filter:hover,
@@ -2078,6 +2095,7 @@ fieldset {
     display: flex;
     justify-content: flex-start;
     list-style: none;
+    margin-top: 30px;
 }
 
 .bottom-filter-link {
@@ -2154,7 +2172,7 @@ fieldset {
 .inner-description {
     background-color: var(--basic-lightgray);
     padding-top: 64px;
-    padding-bottom: 64px;
+    padding-bottom: 69px;
 }
 
 .inner-description-header {
@@ -2165,6 +2183,7 @@ fieldset {
     font-weight: normal;
     font-size: 30px;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .inner-description-text {
