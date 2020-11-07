@@ -6,10 +6,10 @@
     <meta name="keywords" content="Техномарт, инструменты , доставка">
     <meta name="description" content="Техномарт-уникальный сервис по приобритению инструментов для дома">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -62,32 +62,25 @@
         <nav class="main-navigation container">
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="Главная страница">Главная
-          </a>
+                    <a class="navigation-link" aria-label="Главная страница">Главная</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="О компании" href="#">Компания
-          </a>
+                    <a class="navigation-link" aria-label="О компании" href="#">Компания</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="В каталог" href="catalog.html">Каталог
-          </a>
+                    <a class="navigation-link" aria-label="В каталог" href="catalog.html">Каталог</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="Все новости" href="#">Новости
-          </a>
+                    <a class="navigation-link" aria-label="Все новости" href="#">Новости</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="Специальные предложения для наших клиентов" href="#">Спецпредложения
-          </a>
+                    <a class="navigation-link" aria-label="Специальные предложения для наших клиентов" href="#">Спецпредложения</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="Оформление доставки" href="#">Доставка
-          </a>
+                    <a class="navigation-link" aria-label="Оформление доставки" href="#">Доставка</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" aria-label="Страница с нашими контактными данными" href="#">Контакты
-          </a>
+                    <a class="navigation-link" aria-label="Страница с нашими контактными данными" href="#">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -107,27 +100,27 @@
                 </li>
                 <li class="slider">
                     <ul class="slider-list">
-                        <li class="slider-item slider-item--first slider-item--active" data-bullit="slider-pager--first">
-                            <h2 class="slider-header">Дрели</h2>
-                            <p class="slider-description">Соседям на радость</p>
-                            <a class="button-all-items" href="#">Открыть каталог</a>
-                        </li>
-                        <li class="slider-item slider-item--second" data-bullit="slider-pager--second">
+                        <li class="slider-item slider-item--second slider-item--active" data-bullit="slider-pager--first">
                             <h2 class="slider-header">Перфораторы</h2>
                             <p class="slider-description">Настоящие мужские игрушки</p>
+                            <a class="button-all-items" href="#">Открыть каталог</a>
+                        </li>
+                        <li class="slider-item slider-item--first" data-bullit="slider-pager--second">
+                            <h2 class="slider-header">Дрели</h2>
+                            <p class="slider-description">Соседям на радость!</p>
                             <a class="button-all-items" href="#">Открыть каталог</a>
                         </li>
                     </ul>
                     <ul class="slider-pager">
                         <li class="slider-pager-item">
-                            <a href="#" class="slider-pager-link slider-pager-link--active slider-pager--first" data-screen="slider-item--first" aria-label="Первая страница"></a>
+                            <a href="#" class="slider-pager-link slider-pager-link--active slider-pager--first" data-screen="slider-item--second" aria-label="Первая страница"></a>
                         </li>
                         <li class="slider-pager-item">
-                            <a href="#" class="slider-pager-link slider-pager--second" data-screen="slider-item--second" aria-label="Вторая страница"></a>
+                            <a href="#" class="slider-pager-link slider-pager--second" data-screen="slider-item--first" aria-label="Вторая страница"></a>
                         </li>
                     </ul>
                     <a href="#" class="slider-shift slider-shift-left" aria-label="Листать влево"></a>
-                    <a href="" class="slider-shift slider-shift-right" aria-label="Листать вправо"></a>
+                    <a href="#" class="slider-shift slider-shift-right" aria-label="Листать вправо"></a>
                 </li>
                 <li class="rectangles-item rectangles-item--sale">
                     <h2>Скидки 50%</h2><a class="rectangles-link" href="#">На 350 товаров</a>
@@ -173,7 +166,7 @@
                 </li>
                 <li class="goods-item">
                     <div class="goods-img-container">
-                        <img src="img/perforator-bosch-bfg-6000.jpg" alt="Перфоратор Bosch BFG 6000" class="goods-img">
+                        <img src="img/perforator-bosch-bfg-2000.jpg" alt="Перфоратор Bosch BFG 6000" class="goods-img">
                     </div>
                     <div class="goods-buttons-container">
                         <a href="#" class="goods-button-buy">Купить</a>
@@ -187,7 +180,7 @@
                 </li>
                 <li class="goods-item goods-item--new">
                     <div class="goods-img-container">
-                        <img src="img/perforator-bosch-bfg-2000.jpg" class="goods-img" alt="Перфоратор Bosch BFG 2000">
+                        <img src="img/perforator-bosch-bfg-6000.jpg" class="goods-img" alt="Перфоратор Bosch BFG 2000">
                     </div>
                     <div class="goods-buttons-container">
                         <a href="#" class="goods-button-buy">Купить</a>
@@ -260,12 +253,10 @@
                             <a class="servises-link servises-link-active" data-screen="servises-slider-delivery" href="#">Доставка</a>
                         </li>
                         <li class="servises-item">
-                            <a class="servises-link" data-screen="servises-slider-guarantee" href="#">Гарантия
-              </a>
+                            <a class="servises-link" data-screen="servises-slider-guarantee" href="#">Гарантия</a>
                         </li>
                         <li class="servises-item">
-                            <a class="servises-link" data-screen="servises-slider-credit" href="#">Кредит
-              </a>
+                            <a class="servises-link" data-screen="servises-slider-credit" href="#">Кредит</a>
                         </li>
                     </ul>
                     <div class="servises-slider">
@@ -309,8 +300,8 @@
                     </li>
                 </ul>
                 <a href="#" class="button-all-items button-all-items-company">
-          Подробнее о компании
-        </a>
+                 Подробнее о компании
+                </a>
             </section>
             <section class="contacts">
                 <h2 class="contacts-header">Контакты</h2>
@@ -350,11 +341,11 @@
                 <div class="inner-under-container">
                     <div class="under-description">
                         <address class="under-description-address">
-              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            </address>
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                        </address>
                         <a class="under-tel" href="tel:78125550555" aria-label="Позвонить нам">
-              +7(812)555-05-55
-            </a>
+                            +7(812)555-05-55
+                        </a>
                     </div>
                     <ul class="inner-under-navigation-list">
                         <li class="inner-under-navigation-item">
@@ -395,8 +386,8 @@
               href="#">mail@htmlacademy.ru</a></span>
                     <p class="feedback-dev">Разработано-
                         <a class="feedback-link" href="https://htmlacademy.ru/intensive/htmlcss">
-              htmlacademy.ru
-            </a>
+                            htmlacademy.ru
+                        </a>
                     </p>
                 </div>
             </div>
@@ -430,7 +421,7 @@
         <button type="button" class="modal-close"></button>
         <img src="img/bigmap.jpg" alt="карта" width="943" height="449" class="big-map">
     </div>
-    <script type="text/javascript" src="./js/script.js"></script>
+    <script src="./js/script.min.js"></script>
 </body>
 
 </html>
