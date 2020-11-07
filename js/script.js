@@ -101,11 +101,13 @@ let username = document.querySelector('.username');
 let email = document.querySelector('.email');
 let letter = document.querySelector('.letter');
 let modalWriteUsForm = document.querySelector('.write-us-form');
-modalWriteUsForm.addEventListener('submit', function(evt) {
-    if (!username.value || !email.value || !letter.value) {
-        evt.preventDefault();
-    }
-    modalWriteUS.classList.remove('modal-error');
-    modalWriteUS.offsetWidth = modalWriteUS.offsetWidth;
-    modalWriteUS.classList.add('modal-error');
-});
+if (modalWriteUsForm) {
+    modalWriteUsForm.addEventListener('submit', function(evt) {
+        if (!username.value || !email.value || !letter.value) {
+            evt.preventDefault();
+        }
+        modalWriteUS.classList.remove('modal-error');
+        modalWriteUS.offsetWidth = modalWriteUS.offsetWidth;
+        modalWriteUS.classList.add('modal-error');
+    });
+}
