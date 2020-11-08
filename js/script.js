@@ -3,12 +3,13 @@ let modalWriteUS = document.querySelector('.modal-write-us');
 let modalCloseButtons = document.querySelectorAll('.modal-close');
 let modalContactsMapButton = document.querySelector('.contacts-map-link');
 let modalMap = document.querySelector('.modal-map');
-let servisesLinks = document.querySelectorAll('.servises-link');
-let bullits = document.querySelectorAll('.slider-pager-link');
+let servicesLinks = document.querySelectorAll('.services-link');
+let bullits = document.querySelectorAll('.slider-pager-button');
 
 if (modalContactsOpenButton) {
     modalContactsOpenButton.addEventListener('click', function(evt) {
         evt.preventDefault();
+        modalWriteUS.classList.remove('modal-error');
         modalWriteUS.classList.toggle('modal-show');
     });
 }
@@ -30,15 +31,15 @@ if (modalContactsMapButton) {
     });
 }
 
-if (servisesLinks) {
-    servisesLinks.forEach(function(serviceButton, i) {
+if (servicesLinks) {
+    servicesLinks.forEach(function(serviceButton, i) {
         serviceButton.addEventListener('click', function(evt) {
             evt.preventDefault();
             let screen = this.dataset.screen;
-            document.querySelector('.servises-slider-item--active').classList.remove('servises-slider-item--active');
-            document.querySelector('.' + screen).classList.add('servises-slider-item--active');
-            document.querySelector('.servises-link-active').classList.remove('servises-link-active');
-            serviceButton.classList.add('servises-link-active');
+            document.querySelector('.services-slider-item--active').classList.remove('services-slider-item--active');
+            document.querySelector('.' + screen).classList.add('services-slider-item--active');
+            document.querySelector('.services-link-active').classList.remove('services-link-active');
+            serviceButton.classList.add('services-link-active');
         });
     });
 }
@@ -47,9 +48,9 @@ if (bullits) {
     bullits.forEach(function(bullit) {
         bullit.addEventListener('click', function(evt) {
             evt.preventDefault();
-            let activeBullit = document.querySelector('.slider-pager-link--active');
-            activeBullit.classList.remove('slider-pager-link--active');
-            this.classList.add('slider-pager-link--active');
+            let activeBullit = document.querySelector('.slider-pager-button--active');
+            activeBullit.classList.remove('slider-pager-button--active');
+            this.classList.add('slider-pager-button--active');
             let activeSlide = document.querySelector('.slider-item--active');
             activeSlide.classList.remove('slider-item--active');
             let newActiveSlide = document.querySelector('.' + this.dataset.screen);
@@ -68,9 +69,9 @@ if (ticks) {
                 item.classList.toggle('slider-item--active');
                 if (item.classList.contains('slider-item--active')) {
                     let bullit = document.querySelector('.' + item.dataset.bullit);
-                    let activeBullit = document.querySelector('.slider-pager-link--active');
-                    activeBullit.classList.remove('slider-pager-link--active');
-                    bullit.classList.add('slider-pager-link--active');
+                    let activeBullit = document.querySelector('.slider-pager-button--active');
+                    activeBullit.classList.remove('slider-pager-button--active');
+                    bullit.classList.add('slider-pager-button--active');
                 }
             });
         });
@@ -111,3 +112,13 @@ if (modalWriteUsForm) {
         modalWriteUS.classList.add('modal-error');
     });
 }
+
+let modalCart = document.querySelector('.modal-cart');
+let goodsButtonBuy = document.querySelectorAll('.goods-button-buy');
+
+goodsButtonBuy.forEach(function (item) {
+        item.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        modalCart.classList.add('modal-show');
+    });
+});
