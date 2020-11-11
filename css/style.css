@@ -52,6 +52,7 @@
     --goods-button-buy-active: #518534;
     --services-item-line-top : #3a5177;
     --services-item-line-bottom: #293449;
+    --main-logo-box-shadow: rgba(0, 0, 0, 0.24);
 }
 
 
@@ -136,8 +137,8 @@ img {
     padding: 5px;
     text-decoration: none;
     color: var(--basic-white);
-    -webkit-box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: inset 0px -5px 0px var(--main-logo-box-shadow);
+    box-shadow: inset 0px -5px 0px var(--main-logo-box-shadow);
 }
 
 .logo-img {
@@ -1125,7 +1126,7 @@ img {
     background-color: var(--basic-place-your-order);
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
-    color: white;
+    color: var(--basic-white);
     text-transform: uppercase;
 }
 
@@ -2201,7 +2202,7 @@ img {
     margin-bottom: 22px;
 }
 
-.catalog-filter-fildset-power {
+.catalog-filter-fieldset-power {
     margin: 0;
     padding: 0;
     border: none;
